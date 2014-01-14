@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:panelGroup>
+            <h1>Board</h1>
+            <hr/>
+            <h2>Login</h2>
+            <h:form id="menueForm">
+                <h:panelGrid id="grid" columns="1">
+                    <h:panelGroup>
+                        <h:outputLabel value="Benutzername" />
+                        <h:inputText value="#{loginExamplePM.userName}" id="userName"
+                             required="true"
+                             requiredMessage="Bitte Name des Benutzers angeben."/>
+                       <h:message for="userName" styleClass="error"/>
+                    </h:panelGroup>
+                    <h:panelGroup>    
+                        <h:outputLabel value="Passwort" />
+                        <h:message for="userPasswd" styleClass="error"/>
+                        <h:inputText value="#{loginExamplePM.userPasswd}" id="userPasswd"
+                             required="true"
+                             requiredMessage="Bitte Passwort angeben."/>
+                    </h:panelGroup>
+                    <h:commandButton value="Anmelden" action="#{loginExamplePM.userLogin}"/>
+                    <h:commandButton value="Benutzer anlgen" action="registration" immediate="true"/>
+
+
+                </h:panelGrid>
+            </h:form>
+        </h:panelGroup>
+    </h:body>
+</html>
+

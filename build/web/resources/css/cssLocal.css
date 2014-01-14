@@ -1,0 +1,45 @@
+#top {
+    position: relative;
+    background-color: #036fab;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+#top a:link, #top a:visited {
+  color: white;
+  font-weight : bold;
+  text-decoration: none;
+}
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+#left {
+    float: left;
+    background-color: #ffffff;
+    padding: 5px;
+    width: 150px;
+}
+.left_content {
+    background-color: #ffffff;
+    padding: 5px;
+    margin-left: 170px;
+}
+#loggedUser {
+   position:absolute;
+   width:250px;
+   right:0px;
+
+}
+.loggedLabel {
+    text-align: right;
+}
+
+.loggedData {
+    text-align: left;
+}
+.allUserCol1,.allUserColl2,.ulable, .ufunc {
+    text-align: left;
+    width: 200px;
+}
