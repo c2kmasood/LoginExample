@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="master.xhtml">
+            <ui:define name="content">
+              <h1>Bitte neuen Benutzer anlegen.</h1>
+              <h:form id="registrationForm">
+                <h:panelGrid id="grid" columns="2" cellpadding="0" cellspacing="2" >
+                    <h:outputLabel value="Neuer Benutzername " />
+                    <h:panelGroup>
+                        <h:inputText value="#{loginExamplePM.userName}" id="userName"
+                             required="true"
+                             requiredMessage="Bitte Name des Benutzers angeben."/>
+                       <h:message for="userName" styleClass="error"/>
+                    </h:panelGroup>
+                    <h:outputLabel value="Neues Passwort " />
+                    <h:panelGroup>
+                        <h:inputText value="#{loginExamplePM.userPasswd}" id="userPasswd"
+                             required="true"
+                             requiredMessage="Bitte Passwort angeben."/>
+                        <h:message for="userPasswd" styleClass="error"/>
+                    </h:panelGroup>
+                    <h:outputLabel value="Neues Benutzerfunktion" />
+                    <h:panelGroup>
+                        <h:inputText value="#{loginExamplePM.userFunction}" id="userFunction"
+                             required="true"
+                             requiredMessage="Bitte Benutzerfunktion angeben."/>
+                        <h:message for="userFunction" styleClass="error"/>
+                    </h:panelGroup>
+                    <h:commandButton value="Registrieren" action="#{loginExamplePM.createUser}"/>
+                </h:panelGrid>
+              </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
